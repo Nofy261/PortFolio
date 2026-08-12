@@ -3,6 +3,7 @@ import Layout from '@/layouts/Layout.astro'
 import { experiences, education, skills, publications } from '../data/cv'
 import CvTimeline from '@/components/ui/CvTimeline.astro'
 
+import { template } from '@/settings'
 import type { Experience, Education, Publication } from '../types/cv'
 import List from '@/components/ui/List.astro'
 import PublicationsList from '@/components/ui/PublicationsList.astro'
@@ -86,4 +87,9 @@ if (publications.length > 0) {
 			</section>
 		)
 	}
+	<div class="flex justify-center mt-12">
+  		<a href={`${template.base}/CV_nolecler.pdf`} target="_blank" class="btn btn-primary">
+    		Télécharger mon CV
+  		</a>
+	</div>
 </Layout>

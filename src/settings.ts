@@ -7,7 +7,7 @@ export const profile = {
   research_areas: [
   { title: 'Ft_transcendance',
     description: 'Application web full-stack avec un jeu multijoueur et des fonctionnalités sociales.',
-    details: "Ft_transcendence est un projet de développement web complet réalisé en équipe dans le cadre du cursus 42.\nCe projet m’a permis de mieux comprendre le fonctionnement d’une application full-stack, ainsi que la communication entre ses différentes parties. J’ai approfondi mes connaissances en développement frontend et backend, en particulier autour des API REST, de la gestion des données et de l’authentification.\nLe fait que le projet ait été réalisé en équipe m’a également apporté une expérience concrète du développement collaboratif.\nJ’ai été confronté aux problématiques qui peuvent apparaître lorsqu’on travaille à plusieurs sur un même projet : répartition des tâches, organisation du travail, communication, intégration du code, gestion des conflits et coordination entre les différentes fonctionnalités.\nCette expérience m’a appris qu’un projet en équipe ne consiste pas seulement à diviser les tâches, mais aussi à communiquer efficacement, s’adapter au travail des autres et trouver des solutions collectivement lorsque des problèmes apparaissent..."
+    details: "Ft_transcendance est un projet de développement web complet réalisé en équipe dans le cadre du cursus 42.\nCe projet m’a permis de mieux comprendre le fonctionnement d’une application full-stack, ainsi que la communication entre ses différentes parties. J’ai approfondi mes connaissances en développement frontend et backend, en particulier autour des API REST, de la gestion des données et de l’authentification.\nLe fait que le projet ait été réalisé en équipe m’a également apporté une expérience concrète du développement collaboratif.\nJ’ai été confronté aux problématiques qui peuvent apparaître lorsqu’on travaille à plusieurs sur un même projet : répartition des tâches, organisation du travail, communication, intégration du code, gestion des conflits et coordination entre les différentes fonctionnalités.\nCette expérience m’a appris qu’un projet en équipe ne consiste pas seulement à diviser les tâches, mais aussi à communiquer efficacement, s’adapter au travail des autres et trouver des solutions collectivement lorsque des problèmes apparaissent..."
   },
   { title: 'Ft_linear_regression',
     description: 'Implémentation d’un modèle d’IA utilisant la régression linéaire pour prédire le prix d’une voiture à partir de son kilométrage.',
@@ -22,11 +22,11 @@ export const profile = {
 
 // Set equal to an empty string to hide the icon that you don't want to display
 export const social = {
-  email: "",
-  linkedin: "",
+  email: "noufy33@yahoo.com",
+  linkedin: "https://www.linkedin.com/in/nofy-leclercq-a27984409/",
   x: "",
   bluesky: "",
-  github: "",
+  github: "https://github.com/Nofy261",
   gitlab: "",
   scholar: "",
   inspire: "",
