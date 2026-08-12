@@ -44,6 +44,9 @@ const { research_areas } = profile;
             <div>
               <h3 class="text-xl font-semibold mb-2">{area.title}</h3>
               <p class="text-base">{area.description}</p>
+              {area.details && (
+                <p class="text-base mt-2 text-gray-600 whitespace-pre-line">{area.details}</p>
+              )}
             </div>
           </div>
         ))
