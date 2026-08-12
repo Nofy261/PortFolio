@@ -5,7 +5,9 @@ export const profile = {
     "Développeuse junior et étudiante à l’École 42, je m’intéresse particulièrement au développement web, à l’IA et à la Data.",
   author_name: "", // Author name to be highlighted in the papers section
   research_areas: [
-    // { title: 'Physics', description: 'Brief description of the research interest', field: 'physics' },
+  { title: 'Ft_transcendance', description: 'Application web full-stack avec un jeu multijoueur et des fonctionnalités sociales.'},
+  { title: 'Ft_linear_regression', description: 'Implémentation d’un modèle d’IA utilisant la régression linéaire pour prédire le prix d’une voiture à partir de son kilométrage.', link: 'https://github.com/Nofy261/ft_linear_regression'},
+  { title: 'Learn2Slither', description: 'Développement d’une IA utilisant l’apprentissage par renforcement pour apprendre à jouer au Snake grâce à un système de récompenses et de pénalités.', link: 'https://github.com/Nofy261/Learn2Slither'}
   ],
 };
 

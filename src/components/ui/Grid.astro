@@ -4,6 +4,7 @@ interface Props {
   gridItems: {
     title: string;
     description: string;
+    link?: string
   }[];
 }
 
@@ -15,6 +16,11 @@ const {gridTitle, gridItems} = Astro.props;
     <div class="p-6 rounded-lg text-base-content bg-base-200">
       <h3 class="text-xl font-semibold mb-3">{item.title}</h3>
       <p>{item.description}</p>
+      {item.link && (
+        <a href={item.link} target="_blank" class="link link-primary mt-2 inline-block">
+          Voir sur Github
+        </a>
+      )}
     </div>
   ))}
 </div>
