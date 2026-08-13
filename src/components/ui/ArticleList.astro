@@ -1,10 +1,13 @@
 ---
+import { template } from '@/settings'
+
 interface Props {
   listTitle: string;
   listItems: {
     title: string;
     journal: string;
     time: string;
+    abstract?: string;
   }[];
 }
 const {listTitle, listItems} = Astro.props
@@ -16,9 +19,11 @@ const {listTitle, listItems} = Astro.props
 				listItems.map(item => (
 					<div class='p-6 rounded-lg text-base-content bg-base-200'>
 						<h3 class='text-xl font-semibold mb-2'>{item.title}</h3>
-						<p >
+						<p class='text-sm text-base-content/70 mb-3'>
 							{item.journal} • {item.time}
 						</p>
+						{item.abstract && <p class='mb-3'>{item.abstract}</p>}
+						<a href={`${template.base}/papers`} class='link link-primary'>En savoir plus</a>
 					</div>
 				))
 			}

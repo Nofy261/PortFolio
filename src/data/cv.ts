@@ -1,63 +1,84 @@
 export const experiences = [
   {
-    company: "",
-    time: "",
-    title: "",
-    location: "",
-    description: "",
+    company: "Appel Médical",
+    time: "2017 - 2023",
+    title: "Aide-soignante intérimaire",
+    location: "Bordeaux",
+    description: "Interventions dans différents services (médecine, chirurgie, EHPAD, à domicile, foyer...). Travail en équipe et communication, adaptation rapide à des environnements variés, gestion des priorités et situations d'urgence, rigueur et sens des responsabilités.",
   },
-  // {
-  // 	company: 'Radium Institute (Institut du Radium)',
-  // 	time: '1914 - 1934',
-  // 	title: 'Director',
-  // 	location: 'Paris, France',
-  // 	description: 'Led groundbreaking studies on radioactivity and mentored future Nobel Prize laureates.',
-  // },
+  {
+  	company: "AAPAM - Agence de services d'aide à domicile",
+  	time: "2015",
+  	title: "Aide à domicile",
+  	location: "Médoc",
+  	description: "Accompagnement des personnes âgées et/ou en situation de handicap dans les tâches quotidiennes, entretien du domicile et aide aux actes essentiels de la vie courante.",
+  },
 ];
 
 export const education = [
   {
-    school: "ECOLE42",
-    time: "2024-2026",
-    degree: "",
-    location: "",
-    description: "",
+    school: "Ecole 42",
+    time: "2024 - 2029",
+    degree: "Architecte en Technologie du Numérique",
+    location: "Angoulême",
+    description: "À la recherche d'une alternance pour préparer et valider le titre RNCP niveau 7 en développement Web, IA & Data.",
   },
-  // {
-  // 	school: 'University of Paris',
-  // 	time: '1891 - 1895',
-  // 	degree: 'Master’s in Physics and Mathematics',
-  // 	location: 'Paris, France',
-  // 	description: 'Graduated at the top of her class in physics and second in mathematics.',
-  // },
+  {
+    school: "Apdhes Centre Pierre Veaux",
+    time: "2016",
+  	degree: "Diplôme d'État d'Aide-Soignant",
+  	location: "Lesparre - Médoc",
+  	description: "",
+   },
 ];
 
 export const skills = [
   {
-    title: "",
-    description: "",
+    title: "Langages",
+    description: "C, C++, Java, TypeScript",
   },
-  // {
-  // 	title: 'Experimental Techniques',
-  // 	description: 'Spectroscopy, Isolation of Radioactive Elements, Radiation Measurement',
-  // },
+  {
+  	title: "Frontend",
+  	description: "Angular",
+  },
+  {
+    title: "Backend",
+    description: "Spring Boot, API REST",
+  },
+  {
+  	title: "Bases de données",
+  	description: "PostgreSQL",
+  },
+  {
+  	title: "Outils",
+  	description: "GitHub, VSCode",
+  },
+
 ];
+
+export const strengths = [
+  { title: "Capacité d'adaptation", description: "" },
+  { title: "Esprit d'équipe", description: "" },
+  { title: "Rigueur", description: "" },
+];
+
+export const languages = [
+  { name: "Français", level: "Courant", percent: 95 },
+  { name: "Anglais", level: "Intermédiaire", percent: 55 },
+  { name: "Malgache", level: "Langue maternelle", percent: 100 },
+];
+
+export const interests = ["Lecture", "Randonnée", "Cuisine & Pâtisserie"];
+
 
 export const publications = [
   {
-    title: "",
+    title: "SinistreTrack",
     authors: "",
-    journal: "",
-    time: "",
+    journal: "Projet personnel",
+    time: "2026",
     link: "",
-    abstract: "",
+    abstract: "Application web de gestion de sinistres développée avec Angular et Java dans le but d’apprendre et de mettre en pratique ces technologies. Le projet permet de gérer des clients, leurs contrats d’assurance et les sinistres associés, tout en mettant en œuvre l’authentification, la gestion des données et les opérations CRUD.",
   },
-  // {
-  // 	title: 'The Radiation of Uranium Compounds',
-  // 	authors: 'Marie Curie',
-  // 	journal: 'Comptes Rendus de l’Académie des Sciences',
-  // 	time: '1898',
-  // 	link: '#',
-  // 	abstract: 'Early research leading to the identification of uranium’s radioactive properties.',
-  // },
 ];
+
