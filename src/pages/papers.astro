@@ -1,53 +1,89 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 import { publications } from "@/data/cv";
-import { highlightAuthor } from "@/lib/utils";
-import {template} from "@/settings";
+import { template } from "@/settings";
 
-const ALL_PAPERS = publications; // This will be replaced with dynamic data later
+const ALL_PAPERS = publications;
 ---
 
-<Layout title="Papers">
+<Layout title="Portfolio | Nofy Leclercq">
   <div class="prose max-w-none">
-    <h1 class="text-3xl font-bold mb-8">Publications</h1>
+    <h1 class="text-3xl font-bold mb-8">Portfolio</h1>
 
-    <div class="space-y-8">
+    <div class="space-y-16">
       {
         ALL_PAPERS.map((paper) => (
           <div class="card bg-base-200">
             <div class="card-body">
-              <h2 class="card-title text-xl">
-                <a href={template.base + paper.link} class="hover:text-accent">
-                  {paper.title}
-                </a>
-              </h2>
-              <p class="text-base mb-2">
-                <span class="font-medium">Authors:</span>{" "}
-                <span set:html={highlightAuthor(paper.authors)} />
-              </p>
-              <p class="text-sm mb-3">
-                <span class="italic">{paper.journal}</span> • {paper.time}
-              </p>
-              <p class="text-sm text-base-content/80">{paper.abstract}</p>
+              <h2 class="card-title text-2xl">{paper.title}</h2>
+              <p class="text-lg text-base-content/70 mb-1">{paper.subtitle}</p>
+              {paper.technologies?.length > 0 && (
+                <p class="text-sm text-base-content/60 mb-4">
+                  {paper.technologies.join(" · ")}
+                </p>
+              )}
+
+              {paper.image && (
+                <img src={`${template.base}/${paper.image}`} alt={paper.title} class="rounded-lg w-full max-h-96 object-cover object-top mb-6" />
+              )}
+
+              {paper.about && (
+                <div class="mb-6">
+                  <h3 class="text-lg font-semibold mb-2">À propos</h3>
+                  <p class="text-base-content/80">{paper.about}</p>
+                </div>
+              )}
+
+              {paper.demoVideo && (
+                <div class="mb-6">
+                  <h3 class="text-lg font-semibold mb-2">Démonstration</h3>
+                  <video controls class="rounded-lg w-full">
+                    <source src={`${template.base}/${paper.demoVideo}`} type="video/mp4" />
+                  </video>
+                </div>
+              )}
+
+              {paper.features?.length > 0 && (
+                <div class="mb-6">
+                  <h3 class="text-lg font-semibold mb-2">Fonctionnalités</h3>
+                  <ul class="list-disc list-inside space-y-1 text-base-content/80">
+                    {paper.features.map((feature) => (
+                      <li>{feature}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              {paper.technologies?.length > 0 && (
+                <div class="mb-6">
+                  <h3 class="text-lg font-semibold mb-2">Stack technique</h3>
+                  <div class="flex flex-wrap gap-2 mb-3">
+                    {paper.technologies.map((tech) => (
+                      <span class="badge badge-lg badge-outline">{tech}</span>
+                    ))}
+                  </div>
+                  {paper.architecture && (
+                    <p class="text-sm text-base-content/60 italic">{paper.architecture}</p>
+                  )}
+                </div>
+              )}
+
+              {paper.experience && (
+                <div class="mb-6">
+                  <h3 class="text-lg font-semibold mb-2">Mon expérience</h3>
+                  <p class="text-base-content/80">{paper.experience}</p>
+                </div>
+              )}
+
               <div class="card-actions justify-end mt-4">
-                <a href={paper.link} class="btn btn-sm btn-secondary text-secondary-content">
-                  Read Paper
+                <a href={paper.link} target="_blank" class="btn btn-sm btn-secondary text-secondary-content">
+                  Voir sur GitHub
                 </a>
               </div>
             </div>
           </div>
         ))
       }
-    </div>
-
-    <div class="flex justify-center mt-8">
-      <div class="join">
-        <button class="join-item btn btn-sm">«</button>
-        <button class="join-item btn btn-sm">1</button>
-        <button class="join-item btn btn-sm btn-active">2</button>
-        <button class="join-item btn btn-sm">3</button>
-        <button class="join-item btn btn-sm">»</button>
-      </div>
     </div>
   </div>
 </Layout>

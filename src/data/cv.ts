@@ -64,7 +64,7 @@ export const strengths = [
 
 export const languages = [
   { name: "Français", level: "Courant", percent: 95 },
-  { name: "Anglais", level: "Intermédiaire", percent: 55 },
+  { name: "Anglais", level: "Intermédiaire", percent: 50 },
   { name: "Malgache", level: "Langue maternelle", percent: 100 },
 ];
 
@@ -74,11 +74,23 @@ export const interests = ["Lecture", "Randonnée", "Cuisine & Pâtisserie"];
 export const publications = [
   {
     title: "SinistreTrack",
+    subtitle: "Application Web Full-Stack",
     authors: "",
     journal: "Projet personnel",
     time: "2026",
-    link: "",
+    link: "https://github.com/Nofy261/SinistreTrack",
     abstract: "Application web de gestion de sinistres développée avec Angular et Java dans le but d’apprendre et de mettre en pratique ces technologies. Le projet permet de gérer des clients, leurs contrats d’assurance et les sinistres associés, tout en mettant en œuvre l’authentification, la gestion des données et les opérations CRUD.",
+    about: "Application web de gestion de sinistres permettant à un agent de gérer des clients, leurs contrats d’assurance (maison, voiture) et les sinistres associés. Développée avec Angular en frontend et Java (Spring Boot) en backend, avec une base de données PostgreSQL.",
+    technologies: ["Angular", "TypeScript", "Java", "Spring Boot", "PostgreSQL"],
+    architecture: "Angular → REST API → Spring Boot → PostgreSQL",
+    features: [
+      "Authentification sécurisée (inscription, connexion, mot de passe haché).",
+      "Gestion CRUD (création, consultation, modification, suppression) des clients, contrats d’assurance et sinistres associés.",
+      "Dashboard avec recherche de clients.",
+    ],
+    experience: "Premier projet personnel réalisé avec Angular et Java, il m’a permis de mettre en pratique le développement d’une application full-stack et de mieux comprendre la communication entre le front-end et le back-end. J’ai notamment approfondi la conception d’API REST, la gestion des données et l’organisation d’une application complète. Ce projet a également confirmé mon intérêt pour le développement web et mon envie de me spécialiser en Angular et Java.",
+    image: "",
+    demoVideo: "",
   },
 ];
 
