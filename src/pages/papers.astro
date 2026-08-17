@@ -89,4 +89,10 @@ const ALL_PAPERS = publications;
       }
     </div>
   </div>
+
+  <script>
+    document.addEventListener('astro:page-load', () => {
+      document.querySelectorAll('video').forEach((video) => video.load());
+    });
+  </script>
 </Layout>
