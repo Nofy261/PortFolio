@@ -6,9 +6,9 @@ import { template } from "@/settings";
 const ALL_PAPERS = publications;
 ---
 
-<Layout title="Portfolio | Nofy Leclercq">
+<Layout title="Projet Principal | Nofy Leclercq">
   <div class="prose max-w-none">
-    <h1 class="text-3xl font-bold mb-8">Portfolio</h1>
+    <h1 class="text-3xl font-bold mb-8">Projet Principal</h1>
 
     <div class="space-y-16">
       {
@@ -57,12 +57,16 @@ const ALL_PAPERS = publications;
                 </div>
               )}
 
-              {paper.technologies?.length > 0 && (
+              {paper.techStack?.length > 0 && (
                 <div class="mb-6">
-                  <h3 class="text-lg font-semibold mb-2">Stack technique</h3>
-                  <div class="flex flex-wrap gap-2 mb-3">
-                    {paper.technologies.map((tech) => (
-                      <span class="badge badge-lg badge-outline">{tech}</span>
+                  <h3 class="text-lg font-semibold mb-1">Stack technique</h3>
+                  <div class="space-y-2 mb-3">
+                    {paper.techStack.map((group) => (
+                      <p>
+                        <span class="font-semibold">{group.category}</span>
+                        <span>{" : "}</span>
+                        <span class="text-base-content/80">{group.items.join(" · ")}</span>
+                      </p>
                     ))}
                   </div>
                   {paper.architecture && (

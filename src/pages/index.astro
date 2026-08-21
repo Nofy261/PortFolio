@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro'
 
 import { profile } from '@/settings'
 import { publications } from '@/data/cv'
-import ProfilePictures from '@/assets/img.png'
+import ProfilePictures from '@/assets/nofy.png'
 import Hero from '@/components/ui/Hero.astro'
 import Grid from '@/components/ui/Grid.astro'
 import ArticleList from '@/components/ui/ArticleList.astro'
@@ -26,13 +26,13 @@ const { fullName, title, institute, description, research_areas } = profile
 		/>
 	</section>
 
-	<!-- Research Areas -->
+	<!-- Main Project -->
 	<section class='py-12 border-b'>
-		<Grid gridTitle='Projets réalisés' gridItems={research_areas} />
+		<ArticleList listTitle='Projet Principal' listItems={publications} />
 	</section>
 
-	<!-- Recent Publications -->
+	<!-- School Projects -->
 	<section class='py-12 border-t'>
-		<ArticleList listTitle='Portfolio' listItems={publications} />
+		<Grid gridTitle="Projets réalisés à l'École 42" gridItems={research_areas} />
 	</section>
 </Layout>

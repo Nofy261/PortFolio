@@ -22,7 +22,7 @@ const {listTitle, listItems} = Astro.props
 						<p class='text-sm text-base-content/70 mb-3'>
 							{item.journal} • {item.time}
 						</p>
-						{item.abstract && <p class='mb-3'>{item.abstract}</p>}
+						{item.abstract && <p class='mb-3' set:html={item.abstract} />}
 						<a href={`${template.base}/papers`} class='link link-primary'>En savoir plus</a>
 					</div>
 				))
