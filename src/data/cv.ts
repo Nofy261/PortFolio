@@ -96,7 +96,7 @@ export const publications = [
     ],
     experience: "Premier projet personnel réalisé avec Angular et Java, il m’a permis de mettre en pratique le développement d’une application full-stack et de mieux comprendre la communication entre le front-end et le back-end. J’ai notamment approfondi la conception d’API REST, la gestion des données et l’organisation d’une application complète. Ce projet a confirmé mon intérêt pour le développement web et mon envie de me spécialiser en Angular et Java.",
     image: "",
-    demoVideo: "myappli.webm",
+    demoVideo: "appli.webm",
   },
 ];
 
