@@ -2,7 +2,7 @@ export const profile = {
   fullName: "Nofy Leclercq",
   title: "Développeuse Web Junior - Angular / Java",
   description:
-    "Après avoir terminé la première partie de mon parcours à l’École 42, je m’oriente aujourd’hui vers le <strong>développement web</strong>, avec une spécialisation en <strong>Angular et Java</strong>.\n\nAu cours de ma formation, j’ai également découvert l’<strong>IA et la Data</strong> à travers certains projets. Je recherche actuellement une <strong>alternance</strong> dans le domaine du Web, de l’IA ou de la Data afin de poursuivre mon parcours et de <strong>valider un titre RNCP de niveau 7 dans ce domaine</strong>.",
+    "Après avoir terminé la première partie de mon parcours à l’École 42, je m’oriente aujourd’hui vers le <strong>développement web</strong>, avec une spécialisation en <strong>Angular et Java</strong>.\n\nAu cours de ma formation, j’ai également découvert l’<strong>IA et la Data</strong> à travers certains projets. Je recherche actuellement un <strong>stage et/ou une alternance</strong> dans le domaine du Web, de l’IA ou de la Data afin de poursuivre mon parcours et de <strong>valider un titre RNCP de niveau 7 dans ce domaine</strong>.",
   author_name: "", // Author name to be highlighted in the papers section
   research_areas: [
   { title: 'Ft_transcendance',
