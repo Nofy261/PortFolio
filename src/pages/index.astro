@@ -8,9 +8,10 @@ import Grid from '@/components/ui/Grid.astro'
 import ArticleList from '@/components/ui/ArticleList.astro'
 
 const { fullName, title, institute, description, research_areas } = profile
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const webProjects = research_areas.filter(project => project.title === 'Ft_transcendance')
+const aiProjects = research_areas.filter(project =>
+	['Ft_linear_regression', 'Learn2Slither'].includes(project.title)
+)
 ---
 
 <Layout>
@@ -24,13 +25,27 @@ const { fullName, title, institute, description, research_areas } = profile
 		/>
 	</section>
 
-	<!-- Main Project -->
-	<section class='py-12 border-b'>
-		<ArticleList listTitle='Projet Personnel' listItems={publications} />
-	</section>
-
-	<!-- School Projects -->
-	<section class='py-12 border-t'>
-		<Grid gridTitle="Projets réalisés à l'École 42" gridItems={research_areas} />
+	<section class='py-12' aria-labelledby='projects-title'>
+		<h2 id='projects-title' class='text-3xl font-bold mb-8'>Mes projets</h2>
+		<section class='pb-12 border-b' aria-labelledby='web-projects-title'>
+			<h3 id='web-projects-title' class='text-2xl font-bold mb-6'>Projets Web</h3>
+			<ArticleList listItems={publications} />
+			<div class='mt-6'>
+				<Grid gridItems={webProjects} />
+			</div>
+		</section>
+		<section class='py-12 border-b' aria-labelledby='ai-projects-title'>
+			<h3 id='ai-projects-title' class='text-2xl font-bold mb-6'>Projets IA</h3>
+			<Grid gridItems={aiProjects} />
+		</section>
+		<section class='pt-12' aria-labelledby='data-projects-title'>
+			<h3 id='data-projects-title' class='text-2xl font-bold mb-6'>Projets Data</h3>
+			<Grid gridItems={[
+				{
+					title: 'Projet Data',
+					description: 'Présentation du projet à venir.',
+				},
+			]} />
+		</section>
 	</section>
 </Layout>
