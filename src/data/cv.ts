@@ -94,9 +94,8 @@ export const publications = [
       "Gestion CRUD (création, consultation, modification, suppression) des clients, contrats d’assurance et sinistres associés.",
       "Dashboard — recherche de clients et accès aux informations associées.",
     ],
-    experience: "Premier projet personnel réalisé avec Angular et Java, il m’a permis de mettre en pratique le développement d’une application full-stack et de mieux comprendre la communication entre le front-end et le back-end. J’ai notamment approfondi la conception d’API REST, la gestion des données et l’organisation d’une application complète. Ce projet a confirmé mon intérêt pour le développement web et mon envie de me spécialiser en Angular et Java.",
+    experience: "Ce premier projet personnel réalisé avec Angular et Java m’a permis de mettre en pratique le développement d’une application full-stack et de mieux comprendre les interactions entre le front-end et le back-end.\n\nJ’ai notamment approfondi mes compétences en conception d’API REST, en gestion des données et en structuration d’une application complète. Cette expérience m’a également permis de gagner en autonomie et de consolider mes compétences en développement logiciel.",
     image: "",
     demoVideo: "appli.webm",
   },
 ];
-

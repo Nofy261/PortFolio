@@ -10,8 +10,8 @@ const {fullName, title} = profile
 <aside
 	class='px-4 pt-4 h-screen w-[20rem] bg-base-200 text-base-content flex flex-col'
 >
-	<div class='flex flex-col my-8 justify-between h-full'>
-		<div>
+	<div class='flex flex-col my-6 gap-6 flex-1 min-h-0'>
+		<div class='flex-1 min-h-0 overflow-y-auto'>
 			<div class='flex justify-center items-center flex-col'>
 				<Image
 					class='mask mask-circle size-44'
@@ -19,20 +19,35 @@ const {fullName, title} = profile
 					alt={`Profile picture of ${fullName}`}
 				/>
 				<h1 class="text-lg font-black mt-8 hidden lg:block">{fullName}</h1>
+				<p class='text-sm text-base-content/70 text-center mt-2'>{title}</p>
 			</div>
-			<div class='mx-4 mt-16'>
-				<ul class='space-y-4 menu grow shrink menu-md overflow-y-auto'>
+			<div class='mx-4 mt-8'>
+				<ul class='space-y-2 menu menu-md'>
 					<li>
                         <a href={`${template.base}/`} class='text-lg'>Accueil</a>
 					</li>
 					<li>
-                        <a href={`${template.base}/projet-principal`} class='text-lg'>Projet Personnel</a>
+						<details id='projects-menu' transition:persist='projects-menu' class='group'>
+							<summary class='text-lg flex items-center justify-between after:hidden'>
+								<span>Mes projets</span>
+								<svg class='size-4 shrink-0 transition-transform group-open:rotate-180' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' aria-hidden='true'>
+									<path d='m6 9 6 6 6-6' stroke-linecap='round' stroke-linejoin='round' />
+								</svg>
+							</summary>
+							<ul>
+							<li class='menu-title'>Web</li>
+							<li><a href={`${template.base}/projet-principal`}>SinistreTrack</a></li>
+							<li><a href={`${template.base}/ft-transcendance`}>Ft_transcendance</a></li>
+							<li class='menu-title'>Data &amp; IA</li>
+							<li><a href={`${template.base}/ft-linear-regression`}>Ft_linear_regression</a></li>
+							<li><a href={`${template.base}/learn2slither`}>Learn2Slither</a></li>
+							<li class='menu-title'>DevOps &amp; Infrastructure</li>
+							<li><a href={`${template.base}/inception-of-things`}>Inception-of-Things</a></li>
+							</ul>
+						</details>
 					</li>
 					<li>
-                        <a href={`${template.base}/projets-ecole-42`} class='text-lg'>Projets à l'École 42</a>
-					</li>
-					<li>
-                        <a href={`${template.base}/cv`} class='text-lg'>CV</a>
+                        <a href={`${template.base}/cv`} class='text-lg'>Mon CV</a>
                     </li>
 					<li>
                         <a href={`${template.base}/CV.pdf`} target="_blank" class='text-lg'>Télécharger mon CV</a>
@@ -40,7 +55,7 @@ const {fullName, title} = profile
 				</ul>
 			</div>
 		</div>
-		<div class='mx-4'>
+		<div class='mx-4 shrink-0'>
 			<SocialIcons/>
 		</div>
 	</div>

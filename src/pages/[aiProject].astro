@@ -1,0 +1,35 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import { profile } from '@/settings'
+
+export function getStaticPaths() {
+  return profile.research_areas
+    .filter(project => ['Ft_linear_regression', 'Learn2Slither'].includes(project.title))
+    .map(project => ({
+      params: { aiProject: project.pagePath.slice(1) },
+      props: { project },
+    }))
+}
+
+const { project } = Astro.props
+---
+
+<Layout title={`${project.title} | Nofy Leclercq`} description={project.description}>
+  <div class='prose max-w-none'>
+    <h1 class='text-3xl font-bold mb-8'>{project.title}</h1>
+    <div class='card bg-base-200'>
+      <div class='card-body'>
+        <p class='text-sm text-base-content/70 mb-3'>{project.projectType}</p>
+        <p class='text-lg text-base-content/70 mb-4'>{project.description}</p>
+        <div class='text-base whitespace-pre-line' set:html={project.details} />
+        {project.link && (
+          <div class='card-actions justify-end mt-4'>
+            <a href={project.link} target='_blank' rel='noopener noreferrer' class='btn btn-sm btn-primary text-primary-content'>
+              Voir sur GitHub
+            </a>
+          </div>
+        )}
+      </div>
+    </div>
+  </div>
+</Layout>

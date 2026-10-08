@@ -1,0 +1,37 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import { infrastructureProject as project } from '@/data/infrastructure'
+---
+
+<Layout title={`${project.title} | Nofy Leclercq`} description={project.description}>
+  <div class='prose max-w-none'>
+    <h1 class='text-3xl font-bold mb-8'>{project.title}</h1>
+    <div class='card bg-base-200'>
+      <div class='card-body'>
+        <p class='mb-3'><strong>Infrastructure &amp; DevOps | Projet École 42</strong></p>
+        <p class='text-sm text-base-content/70'><strong>Technologies :</strong> Kubernetes (K3s, K3d) · Docker · Argo CD · Helm · GitLab · Vagrant · Bash</p>
+        <section class='mt-6'>
+          <h2 class='text-xl font-semibold mb-2'>Présentation</h2>
+          <p>Inception-of-Things est un projet d'infrastructure visant à mettre en place des environnements Kubernetes et à automatiser le déploiement d'applications.</p>
+          <p class='mt-3'>Réalisé dans le cadre de mon parcours à l'École 42, il m'a permis de découvrir les principes de la conteneurisation, de l'orchestration et du GitOps, à travers la configuration de plusieurs environnements.</p>
+        </section>
+        <section class='mt-6'>
+          <h2 class='text-xl font-semibold mb-2'>Réalisations techniques</h2>
+          <ul class='list-disc list-inside space-y-2'>
+            <li><strong>Infrastructure Kubernetes :</strong> création d'un cluster K3s composé de deux machines virtuelles avec Vagrant et VirtualBox, et automatisation de leur installation à l'aide de scripts Bash.</li>
+            <li><strong>Déploiement d'applications :</strong> configuration de trois applications avec des fichiers YAML, mise en place d'un routage par nom d'hôte via un Ingress et gestion de plusieurs réplicas.</li>
+            <li><strong>Automatisation GitOps :</strong> déploiement d'un cluster K3d et configuration d'Argo CD pour synchroniser les applications Kubernetes avec un dépôt Git.</li>
+            <li><strong>Intégration GitLab :</strong> installation d'une instance GitLab locale avec Helm, puis utilisation de son dépôt comme source de déploiement pour une application gérée par Argo CD.</li>
+          </ul>
+        </section>
+        <section class='mt-6'>
+          <h2 class='text-xl font-semibold mb-2'>Compétences développées</h2>
+          <p>Ce projet m'a permis de me familiariser avec l'administration d'environnements Kubernetes, la configuration réseau des applications conteneurisées et l'automatisation des déploiements à travers une approche GitOps.</p>
+        </section>
+        <div class='card-actions justify-end mt-6'>
+          <a href={project.link} target='_blank' rel='noopener noreferrer' class='btn btn-sm btn-primary text-primary-content'>Voir sur GitHub</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

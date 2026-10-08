@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro'
 
 import { profile } from '@/settings'
 import { publications } from '@/data/cv'
+import { infrastructureProject } from '@/data/infrastructure'
 import Hero from '@/components/ui/Hero.astro'
 import Grid from '@/components/ui/Grid.astro'
 import ArticleList from '@/components/ui/ArticleList.astro'
@@ -29,23 +30,22 @@ const aiProjects = research_areas.filter(project =>
 		<h2 id='projects-title' class='text-3xl font-bold mb-8'>Mes projets</h2>
 		<section class='pb-12 border-b' aria-labelledby='web-projects-title'>
 			<h3 id='web-projects-title' class='text-2xl font-bold mb-6'>Projets Web</h3>
-			<ArticleList listItems={publications} />
-			<div class='mt-6'>
-				<Grid gridItems={webProjects} />
+			<div class='grid grid-cols-1 md:grid-cols-2 gap-6'>
+				<ArticleList listItems={publications} inline />
+				<Grid gridItems={webProjects} inline />
 			</div>
 		</section>
 		<section class='py-12 border-b' aria-labelledby='ai-projects-title'>
-			<h3 id='ai-projects-title' class='text-2xl font-bold mb-6'>Projets IA</h3>
-			<Grid gridItems={aiProjects} />
+			<h3 id='ai-projects-title' class='text-2xl font-bold mb-6'>Projets Data &amp; IA</h3>
+			<div class='grid grid-cols-1 md:grid-cols-2 gap-6'>
+				<Grid gridItems={aiProjects} inline />
+			</div>
 		</section>
-		<section class='pt-12' aria-labelledby='data-projects-title'>
-			<h3 id='data-projects-title' class='text-2xl font-bold mb-6'>Projets Data</h3>
-			<Grid gridItems={[
-				{
-					title: 'Projet Data',
-					description: 'Présentation du projet à venir.',
-				},
-			]} />
+		<section class='pt-12' aria-labelledby='infrastructure-projects-title'>
+			<h3 id='infrastructure-projects-title' class='text-2xl font-bold mb-6'>DevOps &amp; Infrastructure</h3>
+			<div class='grid grid-cols-1 gap-6'>
+				<Grid gridItems={[infrastructureProject]} inline />
+			</div>
 		</section>
 	</section>
 </Layout>

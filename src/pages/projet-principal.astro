@@ -77,13 +77,15 @@ const ALL_PAPERS = publications;
 
               {paper.experience && (
                 <div class="mb-6">
-                  <h3 class="text-lg font-semibold mb-2">Mon expérience</h3>
-                  <p class="text-base-content/80">{paper.experience}</p>
+                  <h3 class="text-lg font-semibold mb-2">Compétences développées</h3>
+                  {paper.experience.split('\n\n').map(paragraph => (
+                    <p class="text-base-content/80 mb-3">{paragraph}</p>
+                  ))}
                 </div>
               )}
 
               <div class="card-actions justify-end mt-4">
-                <a href={paper.link} target="_blank" class="btn btn-sm btn-secondary text-secondary-content">
+                <a href={paper.link} target="_blank" class="btn btn-sm btn-primary text-primary-content">
                   Voir sur GitHub
                 </a>
               </div>
