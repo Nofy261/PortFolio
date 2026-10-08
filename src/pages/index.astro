@@ -3,7 +3,6 @@ import Layout from '../layouts/Layout.astro'
 
 import { profile } from '@/settings'
 import { publications } from '@/data/cv'
-import ProfilePictures from '@/assets/nofy.png'
 import Hero from '@/components/ui/Hero.astro'
 import Grid from '@/components/ui/Grid.astro'
 import ArticleList from '@/components/ui/ArticleList.astro'
@@ -22,7 +21,6 @@ const { fullName, title, institute, description, research_areas } = profile
 			title={title}
 			institute={institute}
 			description={description}
-			profilePicture={ProfilePictures}
 		/>
 	</section>
 
