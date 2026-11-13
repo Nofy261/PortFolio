@@ -1,11 +1,10 @@
 ---
-const {fullName, title, institute, description} = Astro.props
+const {fullName, description} = Astro.props
 ---
 <div class='flex-1'>
   <h1 class='text-4xl font-bold mb-4'>
     Bonjour ! Je suis <span class='text-primary'>{fullName}</span>
   </h1>
-  <p class='text-xl text-gray-600 mb-4'>{title}{institute ? ` at ${institute}` : ''}</p>
   <p class='text-lg mb-6 whitespace-pre-line' set:html={description} />
   <p class='flex items-center gap-3 font-semibold text-primary'>
     <svg class='size-6 shrink-0' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'>
@@ -13,6 +12,6 @@ const {fullName, title, institute, description} = Astro.props
       <path d='M16 3v4M8 3v4M3 11h18' />
       <path d='m8 16 3 3 5-5' class='stroke-green-600' />
     </svg>
-    <span>Disponible immédiatement — Stage / Alternance</span>
+    <span>Disponible immédiatement</span>
   </p>
 </div>
